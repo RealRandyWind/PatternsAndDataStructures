@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{76e5de84-807a-4360-ab73-0b32a60c5150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Main\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Creational">
+      <UniqueIdentifier>{bbab0fb6-f93b-4e27-91d6-bad49172c756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Creational\Header Files">
+      <UniqueIdentifier>{3f9fe1b3-764c-4a12-ad3f-1dc42df91e22}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Creational\Source Files">
+      <UniqueIdentifier>{4b9f282b-4b53-4c46-ba3e-fee48c87507b}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDCollection.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDException.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDGraph.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDIterator.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDObject.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDTypes.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDCreator.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDFactory.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDProduct.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteProductA.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteProductB.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteFactory.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteCreatorA.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDUser.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDBuilder.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteProductC.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDDirector.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteBuilderC.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CPPLIB.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDException.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDObject.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteFactory.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteProductA.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteProductB.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDCreator.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteCreatorA.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDUser.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteProductC.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDDirector.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteBuilderC.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
