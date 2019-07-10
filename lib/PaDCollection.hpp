@@ -6,14 +6,15 @@ namespace PaD
 {
 	using namespace Types;
 
-	template<typename TypeElement>
+	template<typename TypeItem>
 	struct TCollection
 	{
-		using FElement = TypeElement;
-
 		virtual ~TCollection() = 0;
 
-
+		virtual TypeItem Item()
+		{
+			return TypeItem();
+		}
 	};
 
 

@@ -26,7 +26,7 @@ namespace PaD
 
 			virtual FVoid ChangeBuilder(FBuilder*);
 
-			virtual FVoid Construct(EConfiguration);
+			virtual FVoid Produce(EConfiguration);
 
 
 		};

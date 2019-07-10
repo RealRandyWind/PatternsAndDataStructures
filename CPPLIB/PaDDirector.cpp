@@ -22,7 +22,7 @@ FVoid FDirector::ChangeBuilder(FBuilder* Builder)
 	_Builder = Builder;
 }
 
-FVoid FDirector::Construct(EConfiguration Type)
+FVoid FDirector::Produce(EConfiguration Type)
 {
 	_Builder->Reset();
 	if (Type == EConfiguration::Featured)

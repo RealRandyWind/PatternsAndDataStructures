@@ -89,6 +89,33 @@
     <ClInclude Include="PaDConcreteBuilderC.hpp">
       <Filter>Creational\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PaDPrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcretePrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteSubPrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDSingelton.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDResource.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDList.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDInitializer.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PaDConcreteResource.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\PaDSerializable.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CPPLIB.cpp">
@@ -128,6 +155,24 @@
       <Filter>Creational\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PaDConcreteBuilderC.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcretePrototype.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteSubPrototype.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDSingelton.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDResource.cpp">
+      <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDInitializer.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteResource.cpp">
       <Filter>Creational\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

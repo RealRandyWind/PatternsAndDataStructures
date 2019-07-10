@@ -3,11 +3,15 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <chrono>
+#include <functional>
 
 namespace PaD
 {
 	namespace Types
 	{
+		template<typename TypeSignature>
+		using TFunction = std::function<TypeSignature>;
+
 		using FSize = size_t;
 
 		using FPointer = decltype(nullptr);

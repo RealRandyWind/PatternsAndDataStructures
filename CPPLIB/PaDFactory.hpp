@@ -1,7 +1,6 @@
 #pragma once
 
 #include "PaDTypes.hpp"
-#include "PaDObject.hpp"
 
 #include "PaDConcreteProductA.hpp"
 #include "PaDConcreteProductB.hpp"
@@ -12,7 +11,7 @@ namespace PaD
 	{
 		using namespace Types;
 
-		struct FFactory : FObject
+		struct FFactory
 		{
 			virtual ~FFactory() = 0;
 

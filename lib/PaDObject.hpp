@@ -10,7 +10,6 @@ namespace PaD
 
 		virtual ~FObject();
 
-
 	};
 
 

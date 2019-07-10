@@ -10,4 +10,8 @@
 // add headers that you want to pre-compile here
 #include "framework.h"
 
+#include "PaDTypes.hpp"
+#include "PaDObject.hpp"
+#include "PaDException.hpp"
+
 #endif //PCH_H
