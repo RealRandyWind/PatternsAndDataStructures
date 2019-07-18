@@ -2,15 +2,16 @@
 
 #include "PaDTypes.hpp"
 #include "PaDObject.hpp"
+#include "PaDCollection.hpp"
 
 namespace PaD
 {
 	using namespace Types;
 
-	template<typename TypeElement>
-	struct TIterator : FObject
+	template<typename TypeItem>
+	struct TIterator : TCollection<TypeItem>
 	{
-		using FElement = TypeElement;
+		using FIterator = TIterator<TypeItem>;
 
 		TIterator() : FObject() { }
 

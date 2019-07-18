@@ -27,6 +27,17 @@
       <UniqueIdentifier>{4b9f282b-4b53-4c46-ba3e-fee48c87507b}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Structural">
+      <UniqueIdentifier>{3c0bde65-73fe-4115-b06c-e9d277fc3be1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structural\Header Files">
+      <UniqueIdentifier>{effa6734-d2f3-4987-a702-7354174c1f39}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Structural\Source Files">
+      <UniqueIdentifier>{5dcff9c6-9fb6-428e-aad3-be054e8bb8ea}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -35,92 +46,134 @@
     <ClInclude Include="pch.h">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDCollection.hpp">
+    <ClInclude Include="..\lib\C++\PaDCollection.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDException.hpp">
+    <ClInclude Include="..\lib\C++\PaDData.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDGraph.hpp">
+    <ClInclude Include="..\lib\C++\PaDException.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDIterator.hpp">
+    <ClInclude Include="..\lib\C++\PaDGraph.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDObject.hpp">
+    <ClInclude Include="..\lib\C++\PaDInitializer.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDTypes.hpp">
+    <ClInclude Include="..\lib\C++\PaDIterator.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PaDCreator.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDFactory.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDProduct.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteProductA.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteProductB.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteFactory.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteCreatorA.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDUser.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDBuilder.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteProductC.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDDirector.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteBuilderC.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDPrototype.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcretePrototype.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDConcreteSubPrototype.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDSingelton.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PaDResource.hpp">
-      <Filter>Creational\Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\lib\PaDList.hpp">
+    <ClInclude Include="..\lib\C++\PaDList.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDInitializer.hpp">
+    <ClInclude Include="..\lib\C++\PaDObject.hpp">
       <Filter>Main\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PaDConcreteResource.hpp">
+    <ClInclude Include="..\lib\C++\PaDSerializable.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDTypes.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDBuilder.hpp">
       <Filter>Creational\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\lib\PaDSerializable.hpp">
+    <ClInclude Include="..\lib\C++\PaDConcreteBuilderB.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteBuilderC.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteCreatorA.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteFactory.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteProductA.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteProductB.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteProductC.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcretePrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteResource.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteSubPrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConsumer.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDCreator.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDDirector.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDFactory.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDProduct.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDPrototype.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDResource.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDSingelton.hpp">
+      <Filter>Creational\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDService.hpp">
       <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDAdapter.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDProtocol.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDUser.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteImplementation.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDImplementation.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDBridge.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDComponent.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDComposite.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteComponent.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaD.hpp">
+      <Filter>Main\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDDecorator.hpp">
+      <Filter>Structural\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteDecorator.hpp">
+      <Filter>Structural\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPPLIB.cpp">
-      <Filter>Main\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Main\Source Files</Filter>
     </ClCompile>
@@ -143,9 +196,6 @@
       <Filter>Creational\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PaDConcreteCreatorA.cpp">
-      <Filter>Creational\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PaDUser.cpp">
       <Filter>Creational\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PaDConcreteProductC.cpp">
@@ -174,6 +224,33 @@
     </ClCompile>
     <ClCompile Include="PaDConcreteResource.cpp">
       <Filter>Creational\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDAdapter.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDService.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDUser.cpp">
+      <Filter>Main\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteImplementation.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDBridge.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDComposite.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteComponent.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDDecorator.cpp">
+      <Filter>Structural\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteDecorator.cpp">
+      <Filter>Structural\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

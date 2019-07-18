@@ -15,6 +15,11 @@ namespace PaD
 		{
 			return TypeItem();
 		}
+
+		virtual TypeItem* NewItem()
+		{
+			return new TypeItem();
+		}
 	};
 
 

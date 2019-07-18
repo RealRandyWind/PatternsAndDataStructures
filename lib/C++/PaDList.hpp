@@ -47,7 +47,10 @@ namespace PaD
 
 		virtual FVoid Reserve(FSize ReserveSize)
 		{
-			_Data = (TypeItem*)realloc(_Data, ReserveSize * sizeof(TypeItem));
+			auto Pointer = realloc(_Data, ReserveSize * sizeof(TypeItem));
+			auto bFail = Pointer == NullPtr && ReserveSize > 0;
+			if (bFail) { return; }
+			_Data = (TypeItem*)Pointer;
 			_BufferSize = ReserveSize;
 			if (ReserveSize < _Size) { _Size = ReserveSize; }
 		}

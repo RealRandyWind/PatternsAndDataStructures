@@ -22,8 +22,9 @@
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{67F39E5A-8235-4064-B208-9E7ADD36FC0D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>CPPLIB</RootNamespace>
+    <RootNamespace>C++LIB</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>C++LIB</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -80,7 +81,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
     <IntDir>bin\$(Platform)\</IntDir>
-    <TargetName>PaD$(ProjectName)</TargetName>
+    <TargetName>PaD$(Language)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -130,7 +131,7 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -138,11 +139,11 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).lib $(SolutionDir)lib\$(Platform)\ -Force
-PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$(Platform)\ -Force</Command>
+      <Command>PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).lib" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force
+PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copies project lib to librairy directory</Message>
@@ -211,50 +212,72 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\lib\PaDCollection.hpp" />
-    <ClInclude Include="..\lib\PaDException.hpp" />
-    <ClInclude Include="..\lib\PaDGraph.hpp" />
-    <ClInclude Include="..\lib\PaDInitializer.hpp" />
-    <ClInclude Include="..\lib\PaDIterator.hpp" />
-    <ClInclude Include="..\lib\PaDList.hpp" />
-    <ClInclude Include="..\lib\PaDObject.hpp" />
-    <ClInclude Include="..\lib\PaDSerializable.hpp" />
-    <ClInclude Include="..\lib\PaDTypes.hpp" />
+    <ClInclude Include="..\lib\C++\PaD.hpp" />
+    <ClInclude Include="..\lib\C++\PaDAdapter.hpp" />
+    <ClInclude Include="..\lib\C++\PaDBridge.hpp" />
+    <ClInclude Include="..\lib\C++\PaDBuilder.hpp" />
+    <ClInclude Include="..\lib\C++\PaDCollection.hpp" />
+    <ClInclude Include="..\lib\C++\PaDComponent.hpp" />
+    <ClInclude Include="..\lib\C++\PaDComposite.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteBuilderB.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteBuilderC.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteComponent.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteCreatorA.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteDecorator.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteFactory.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteImplementation.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteProductA.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteProductB.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteProductC.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcretePrototype.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteResource.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteSubPrototype.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConsumer.hpp" />
+    <ClInclude Include="..\lib\C++\PaDCreator.hpp" />
+    <ClInclude Include="..\lib\C++\PaDData.hpp" />
+    <ClInclude Include="..\lib\C++\PaDDecorator.hpp" />
+    <ClInclude Include="..\lib\C++\PaDDirector.hpp" />
+    <ClInclude Include="..\lib\C++\PaDException.hpp" />
+    <ClInclude Include="..\lib\C++\PaDFactory.hpp" />
+    <ClInclude Include="..\lib\C++\PaDGraph.hpp" />
+    <ClInclude Include="..\lib\C++\PaDImplementation.hpp" />
+    <ClInclude Include="..\lib\C++\PaDInitializer.hpp" />
+    <ClInclude Include="..\lib\C++\PaDIterator.hpp" />
+    <ClInclude Include="..\lib\C++\PaDList.hpp" />
+    <ClInclude Include="..\lib\C++\PaDObject.hpp" />
+    <ClInclude Include="..\lib\C++\PaDProduct.hpp" />
+    <ClInclude Include="..\lib\C++\PaDProtocol.hpp" />
+    <ClInclude Include="..\lib\C++\PaDPrototype.hpp" />
+    <ClInclude Include="..\lib\C++\PaDResource.hpp" />
+    <ClInclude Include="..\lib\C++\PaDSerializable.hpp" />
+    <ClInclude Include="..\lib\C++\PaDService.hpp" />
+    <ClInclude Include="..\lib\C++\PaDSingelton.hpp" />
+    <ClInclude Include="..\lib\C++\PaDTypes.hpp" />
+    <ClInclude Include="..\lib\C++\PaDUser.hpp" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="PaDBuilder.hpp" />
-    <ClInclude Include="PaDConcreteBuilderC.hpp" />
-    <ClInclude Include="PaDConcreteCreatorA.hpp" />
-    <ClInclude Include="PaDConcreteFactory.hpp" />
-    <ClInclude Include="PaDConcreteProductA.hpp" />
-    <ClInclude Include="PaDConcreteProductB.hpp" />
-    <ClInclude Include="PaDConcreteProductC.hpp" />
-    <ClInclude Include="PaDConcretePrototype.hpp" />
-    <ClInclude Include="PaDConcreteResource.hpp" />
-    <ClInclude Include="PaDConcreteSubPrototype.hpp" />
-    <ClInclude Include="PaDDirector.hpp" />
-    <ClInclude Include="PaDResource.hpp" />
-    <ClInclude Include="PaDPrototype.hpp" />
-    <ClInclude Include="PaDSingelton.hpp" />
-    <ClInclude Include="PaDUser.hpp" />
-    <ClInclude Include="PaDCreator.hpp" />
-    <ClInclude Include="PaDFactory.hpp" />
-    <ClInclude Include="PaDProduct.hpp" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CPPLIB.cpp" />
+    <ClCompile Include="PaDAdapter.cpp" />
+    <ClCompile Include="PaDBridge.cpp" />
+    <ClCompile Include="PaDComposite.cpp" />
     <ClCompile Include="PaDConcreteBuilderC.cpp" />
+    <ClCompile Include="PaDConcreteComponent.cpp" />
     <ClCompile Include="PaDConcreteCreatorA.cpp" />
+    <ClCompile Include="PaDConcreteDecorator.cpp" />
     <ClCompile Include="PaDConcreteFactory.cpp" />
+    <ClCompile Include="PaDConcreteImplementation.cpp" />
     <ClCompile Include="PaDConcreteProductA.cpp" />
     <ClCompile Include="PaDConcreteProductB.cpp" />
     <ClCompile Include="PaDConcreteProductC.cpp" />
     <ClCompile Include="PaDConcretePrototype.cpp" />
     <ClCompile Include="PaDConcreteResource.cpp" />
     <ClCompile Include="PaDConcreteSubPrototype.cpp" />
+    <ClCompile Include="PaDDecorator.cpp" />
     <ClCompile Include="PaDDirector.cpp" />
     <ClCompile Include="PaDInitializer.cpp" />
     <ClCompile Include="PaDResource.cpp" />
+    <ClCompile Include="PaDService.cpp" />
     <ClCompile Include="PaDSingelton.cpp" />
     <ClCompile Include="PaDUser.cpp" />
     <ClCompile Include="PaDCreator.cpp" />

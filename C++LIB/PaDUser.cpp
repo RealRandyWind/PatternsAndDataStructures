@@ -3,12 +3,15 @@
 
 #include "PaDUser.hpp"
 
+using namespace PaD;
 using namespace PaD::Creational;
 using namespace PaD::Types;
 
 FUser::FUser(FFactory *Factory) : FObject()
 {
 	_Factory = Factory;
+	_Protocol = NullPtr;
+	_Implementation = NullPtr;
 }
 
 FUser::~FUser()
@@ -24,4 +27,14 @@ FVoid FUser::Operate()
 
 	ProductA->Consume();
 	if (bReady) { ProductB->Consume(); }
+}
+
+FVoid FUser::ChangeProtocol(FProtocol* Protocol)
+{
+	_Protocol = Protocol;
+}
+
+FVoid FUser::ChangeImplementation(FImplementation* Implementation)
+{
+	_Implementation = Implementation;
 }
