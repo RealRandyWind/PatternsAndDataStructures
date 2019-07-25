@@ -11,7 +11,7 @@ namespace PaD
 
 		struct FPrototype
 		{
-			virtual ~FPrototype() = 0;
+			virtual ~FPrototype() = 0 { };
 
 			virtual FPrototype* Clone() = 0;
 

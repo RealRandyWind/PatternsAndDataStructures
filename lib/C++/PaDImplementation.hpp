@@ -10,7 +10,7 @@ namespace PaD
 
 		struct FImplementation
 		{
-			virtual ~FImplementation() = 0;
+			virtual ~FImplementation() = 0 { };
 
 			virtual FVoid MethodeA() = 0;
 

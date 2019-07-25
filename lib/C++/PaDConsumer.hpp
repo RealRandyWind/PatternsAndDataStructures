@@ -4,27 +4,32 @@
 #include "PaDObject.hpp"
 
 #include "PaDFactory.hpp"
+#include "PaDProtocol.hpp"
+#include "PaDImplementation.hpp"
 
 namespace PaD
 {
-	namespace Creational
+	using namespace Creational;
+	using namespace Structural;
+
+	struct FConsumer : FObject
 	{
-		struct FUser : FObject
-		{
-			FFactory* _Factory;
+		FFactory* _Factory;
+		FProtocol* _Protocol;
+		FImplementation* _Implementation;
 
-			FUser(FFactory*);
+		FConsumer(FFactory*);
 
-			virtual ~FUser();
+		virtual ~FConsumer();
 
-			virtual FVoid Operate();
+		virtual FVoid Operate();
+
+		virtual FVoid ChangeProtocol(FProtocol*);
+
+		virtual FVoid ChangeImplementation(FImplementation*);
 
 
-		};
-
-
-
-	}
+	};
 
 
 

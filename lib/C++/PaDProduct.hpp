@@ -10,7 +10,7 @@ namespace PaD
 
 		struct FProduct
 		{
-			virtual ~FProduct() = 0;
+			virtual ~FProduct() = 0 { };
 
 			virtual FVoid Consume() = 0;
 

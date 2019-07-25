@@ -13,7 +13,7 @@ namespace PaD
 
 		struct FFactory
 		{
-			virtual ~FFactory() = 0;
+			virtual ~FFactory() = 0 { };
 
 			virtual FConcreteProductA * ProduceA() = 0;
 

@@ -12,7 +12,7 @@ namespace PaD
 
 		struct FProtocol
 		{
-			virtual ~FProtocol() = 0;
+			virtual ~FProtocol() = 0 { };
 
 			virtual FObject* Method(FData*) = 0;
 

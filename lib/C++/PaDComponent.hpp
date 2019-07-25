@@ -11,7 +11,7 @@ namespace PaD
 
 		struct FComponent
 		{
-			virtual ~FComponent() = 0;
+			virtual ~FComponent() = 0 { };
 
 			virtual FVoid Execute() = 0;
 

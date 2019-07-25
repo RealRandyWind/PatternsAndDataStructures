@@ -13,7 +13,7 @@ namespace PaD
 
 		using FItem = TypeItem;
 
-		virtual ~TGraph() = 0;
+		virtual ~TGraph() = 0 { };
 		
 		virtual TypeNode Node()
 		{

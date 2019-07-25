@@ -5,6 +5,8 @@
 
 namespace PaD
 {
+	using namespace Types;
+
 	struct FInitializer : FObject
 	{
 		using FOnInitialize = TFunction<FBoolean()>;

@@ -75,7 +75,7 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
     <IntDir>bin\$(Platform)\</IntDir>
-    <TargetName>PaD$(ProjectName)</TargetName>
+    <TargetName>PaD$(Language)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -87,13 +87,13 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
     <IntDir>bin\$(Platform)\</IntDir>
-    <TargetName>PaD$(ProjectName)</TargetName>
+    <TargetName>PaD$(Language)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)bin\$(Platform)\</OutDir>
     <IntDir>bin\$(Platform)\</IntDir>
-    <TargetName>PaD$(ProjectName)</TargetName>
+    <TargetName>PaD$(Language)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -104,7 +104,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -112,11 +112,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).lib $(SolutionDir)lib\$(Platform)\ -Force
-PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$(Platform)\ -Force</Command>
+      <Command>PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).lib" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force
+PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copies project lib to librairy directory</Message>
@@ -160,7 +160,7 @@ PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -170,11 +170,11 @@ PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).lib $(SolutionDir)lib\$(Platform)\ -Force
-PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$(Platform)\ -Force</Command>
+      <Command>PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).lib" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force
+PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copies project lib to librairy directory</Message>
@@ -191,7 +191,7 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalIncludeDirectories>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -201,11 +201,11 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>$(SolutionDir)lib;$(SolutionDir)lib\$(Platform);$(SolutionDir)dep;$(SolutionDir)dep\$(Platform)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Language);$(SolutionDir)lib\$(Language)\$(Platform);$(SolutionDir)dep\$(Language);$(SolutionDir)dep\$(Language)\$(Platform)</AdditionalLibraryDirectories>
     </Lib>
     <PostBuildEvent>
-      <Command>PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).lib $(SolutionDir)lib\$(Platform)\ -Force
-PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$(Platform)\ -Force</Command>
+      <Command>PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).lib" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force
+PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib\$(Language)\$(Platform)\ -Force</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copies project lib to librairy directory</Message>
@@ -214,12 +214,12 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
   <ItemGroup>
     <ClInclude Include="..\lib\C++\PaD.hpp" />
     <ClInclude Include="..\lib\C++\PaDAdapter.hpp" />
+    <ClInclude Include="..\lib\C++\PaDBase.hpp" />
     <ClInclude Include="..\lib\C++\PaDBridge.hpp" />
     <ClInclude Include="..\lib\C++\PaDBuilder.hpp" />
     <ClInclude Include="..\lib\C++\PaDCollection.hpp" />
     <ClInclude Include="..\lib\C++\PaDComponent.hpp" />
     <ClInclude Include="..\lib\C++\PaDComposite.hpp" />
-    <ClInclude Include="..\lib\C++\PaDConcreteBuilderB.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteBuilderC.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteComponent.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteCreatorA.hpp" />
@@ -233,6 +233,7 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
     <ClInclude Include="..\lib\C++\PaDConcreteResource.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteSubPrototype.hpp" />
     <ClInclude Include="..\lib\C++\PaDConsumer.hpp" />
+    <ClInclude Include="..\lib\C++\PaDCreational.hpp" />
     <ClInclude Include="..\lib\C++\PaDCreator.hpp" />
     <ClInclude Include="..\lib\C++\PaDData.hpp" />
     <ClInclude Include="..\lib\C++\PaDDecorator.hpp" />
@@ -252,8 +253,8 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
     <ClInclude Include="..\lib\C++\PaDSerializable.hpp" />
     <ClInclude Include="..\lib\C++\PaDService.hpp" />
     <ClInclude Include="..\lib\C++\PaDSingelton.hpp" />
+    <ClInclude Include="..\lib\C++\PaDStructural.hpp" />
     <ClInclude Include="..\lib\C++\PaDTypes.hpp" />
-    <ClInclude Include="..\lib\C++\PaDUser.hpp" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
@@ -279,7 +280,7 @@ PowerShell.exe -Command Copy-Item $(OutDir)$(TargetName).pdb $(SolutionDir)lib\$
     <ClCompile Include="PaDResource.cpp" />
     <ClCompile Include="PaDService.cpp" />
     <ClCompile Include="PaDSingelton.cpp" />
-    <ClCompile Include="PaDUser.cpp" />
+    <ClCompile Include="PaDConsumer.cpp" />
     <ClCompile Include="PaDCreator.cpp" />
     <ClCompile Include="PaDException.cpp" />
     <ClCompile Include="PaDObject.cpp" />

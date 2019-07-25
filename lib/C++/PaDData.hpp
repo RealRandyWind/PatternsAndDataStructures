@@ -7,7 +7,7 @@ namespace PaD
 {
 	struct FData : FObject
 	{
-		virtual ~FData() = 0;
+		virtual ~FData() = 0 { };
 
 	};
 

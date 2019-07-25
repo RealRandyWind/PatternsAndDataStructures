@@ -9,7 +9,7 @@ namespace PaD
 	template<typename TypeItem>
 	struct TCollection
 	{
-		virtual ~TCollection() = 0;
+		virtual ~TCollection() = 0 { };
 
 		virtual TypeItem Item()
 		{
