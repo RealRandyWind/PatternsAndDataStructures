@@ -14,6 +14,8 @@ namespace PaD
 		{
 			FObject* _OtherAttribute;
 
+			FConcreteSubPrototype();
+
 			FConcreteSubPrototype(FConcreteSubPrototype*);
 
 			virtual ~FConcreteSubPrototype();

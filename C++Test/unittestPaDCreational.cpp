@@ -26,26 +26,44 @@ namespace PaDTest
 		{
 			auto FactoryA = new FConcreteFactory();
 			FFactory* Factory = FactoryA;
-			auto User = new FConsumer(Factory);
-			User->Operate();
+			auto Consumer = new FConsumer(Factory);
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestBuilder)
 		{
-			
-			
+			auto BuilderC = new FConcreteBuilderC();
+			FBuilder* Builder = BuilderC;
+			auto Director = new FDirector(Builder);
+			auto Consumer = new FConsumer();
+			Consumer->ChangeDirector(Director);
+			Consumer->Operate(FDirector::EConfiguration::Featured);
+			auto Product = BuilderC->Result();
 		}
 
 		TEST_METHOD(TestPrototype)
 		{
+			auto ConcretePrototype = new FConcreteSubPrototype();
+			FPrototype* Prototype = ConcretePrototype;
+			auto Consumer = new FConsumer();
+			Consumer->ChangePrototype(Prototype);
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestSingelton)
 		{
+			auto Singelton = FSingelton::Instance();
+			auto Consumer = new FConsumer();
+			Consumer->ChangeSingelton(Singelton);
 		}
 
 		TEST_METHOD(TestResource)
 		{
+			FResource* ResourceA = new FConcreteResource();
+			FResource* ResourceB = new FConcreteResource();
+			{
+				FResource* ResourceC = new FConcreteResource();
+			}
 		}
 	};
 }

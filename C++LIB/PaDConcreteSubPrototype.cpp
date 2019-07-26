@@ -6,6 +6,11 @@
 using namespace PaD::Creational;
 using namespace PaD::Types;
 
+FConcreteSubPrototype::FConcreteSubPrototype() : FConcretePrototype(this)
+{
+	_OtherAttribute = new FObject();
+}
+
 FConcreteSubPrototype::FConcreteSubPrototype(FConcreteSubPrototype* Prototype) : FConcretePrototype(this)
 {
 	_OtherAttribute = Prototype->_OtherAttribute;
@@ -13,7 +18,7 @@ FConcreteSubPrototype::FConcreteSubPrototype(FConcreteSubPrototype* Prototype) :
 
 FConcreteSubPrototype::~FConcreteSubPrototype()
 {
-
+	_OtherAttribute = NullPtr;
 }
 
 FPrototype* FConcreteSubPrototype::Clone()

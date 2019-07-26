@@ -11,7 +11,7 @@ namespace PaD
 
 		struct FBuilder
 		{
-			virtual ~FBuilder() = 0;
+			virtual ~FBuilder() = 0 { };
 
 			virtual FVoid PreformStepA() = 0;
 
