@@ -9,7 +9,7 @@ namespace PaD
 	using namespace Types;
 
 	template<typename TypeItem>
-	struct TIterator : TCollection<TypeItem>
+	struct TIterator : TCollection<TypeItem>, FObject
 	{
 		using FIterator = TIterator<TypeItem>;
 

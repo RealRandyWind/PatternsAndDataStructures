@@ -7,8 +7,11 @@ using namespace PaD;
 using namespace PaD::Creational;
 using namespace PaD::Types;
 
+struct FResource::_FEntry;
+
 TList<FResource::_FEntry> FResource::_List = TList<FResource::_FEntry>();
 FResource::_FEntry* FResource::_Next = NullPtr;
+FResource* FResource::_Active = NullPtr;
 
 FResource::FResource() : FObject()
 {

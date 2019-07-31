@@ -24,6 +24,9 @@
     <ClCompile Include="unittestPaDStructural.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="unittestPaDBase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">

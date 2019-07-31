@@ -60,10 +60,7 @@ namespace PaDTest
 		TEST_METHOD(TestResource)
 		{
 			FResource* ResourceA = new FConcreteResource();
-			FResource* ResourceB = new FConcreteResource();
-			{
-				FResource* ResourceC = new FConcreteResource();
-			}
+			
 		}
 	};
 }

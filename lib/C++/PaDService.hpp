@@ -18,6 +18,8 @@ namespace PaD
 
 		virtual FObject* SpecialMethod(FByte*);
 
+		virtual FObject* Method(FData*);
+
 
 	};
 

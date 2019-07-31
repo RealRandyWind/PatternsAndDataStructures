@@ -17,7 +17,12 @@ FService::~FService()
 
 }
 
-FObject* FService::SpecialMethod(FByte*)
+FObject* FService::SpecialMethod(FByte* Bytes)
+{
+	return NullPtr;
+}
+
+FObject* FService::Method(FData* Data)
 {
 	return NullPtr;
 }
