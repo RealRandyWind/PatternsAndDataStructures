@@ -4,6 +4,8 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "PaDStructural.hpp"
+#include "PaDConsumer.hpp"
+#include "PaDService.hpp"
 
 namespace PaDTest
 {
@@ -17,10 +19,20 @@ namespace PaDTest
 		
 		TEST_METHOD(TestAdapter)
 		{
+			auto Consumer = new FConsumer();
+			auto Service = new FService();
+			auto Adapter = new FAdapter(Service);
+			FProtocol* Protocol = Adapter;
+			Consumer->ChangeProtocol(Protocol);
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestBridge)
 		{
+			auto Consumer = new FConsumer();
+			auto Implementation = new FConcreteImplementation();
+			Consumer->ChangeImplementation(Implementation);
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestComposite)

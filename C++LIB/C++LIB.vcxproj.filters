@@ -175,6 +175,9 @@
     <ClInclude Include="..\lib\C++\PaDConsumer.hpp">
       <Filter>Base\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDConcreteData.hpp">
+      <Filter>Base\Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -253,6 +256,9 @@
       <Filter>Structural\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PaDConsumer.cpp">
+      <Filter>Base\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PaDConcreteData.cpp">
       <Filter>Base\Source Files</Filter>
     </ClCompile>
   </ItemGroup>

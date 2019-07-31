@@ -9,3 +9,4 @@
 #include "PaDDecorator.hpp"
 #include "PaDImplementation.hpp"
 #include "PaDProtocol.hpp"
+#include "PaDConcreteImplementation.hpp"

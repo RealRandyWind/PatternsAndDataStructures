@@ -5,6 +5,8 @@
 #include "PaDConcreteBuilderC.hpp"
 #include "PaDConcreteSubPrototype.hpp"
 
+#include "PaDConcreteData.hpp"
+
 using namespace PaD;
 using namespace PaD::Creational;
 using namespace PaD::Types;
@@ -41,6 +43,20 @@ FVoid FConsumer::Operate()
 	}
 
 	if (_Prototype) { auto Copy = _Prototype->Clone(); }
+
+	if (_Protocol)
+	{
+		auto Data = new FConcreteData();
+		auto Buffer = _Protocol->Method(Data);
+	}
+
+	if (_Implementation)
+	{
+		auto Bridge = new FBridge(_Implementation);
+		Bridge->FeatureA();
+		Bridge->FeatureB();
+		delete Bridge;
+	}
 
 	Operate(FDirector::EConfiguration::Featured);
 }

@@ -223,6 +223,7 @@ PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib
     <ClInclude Include="..\lib\C++\PaDConcreteBuilderC.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteComponent.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteCreatorA.hpp" />
+    <ClInclude Include="..\lib\C++\PaDConcreteData.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteDecorator.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteFactory.hpp" />
     <ClInclude Include="..\lib\C++\PaDConcreteImplementation.hpp" />
@@ -265,6 +266,7 @@ PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib
     <ClCompile Include="PaDConcreteBuilderC.cpp" />
     <ClCompile Include="PaDConcreteComponent.cpp" />
     <ClCompile Include="PaDConcreteCreatorA.cpp" />
+    <ClCompile Include="PaDConcreteData.cpp" />
     <ClCompile Include="PaDConcreteDecorator.cpp" />
     <ClCompile Include="PaDConcreteFactory.cpp" />
     <ClCompile Include="PaDConcreteImplementation.cpp" />

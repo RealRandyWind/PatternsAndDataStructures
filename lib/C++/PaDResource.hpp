@@ -48,8 +48,6 @@ namespace PaD
 
 			static FVoid Clear(FSize);
 
-			static FVoid ClearAll();
-
 			static FResource* Pointer(FSize);
 
 		private:

@@ -38,8 +38,11 @@ namespace PaD
 		{
 			auto bResize = this->_Size >= this->_BufferSize;
 
-			if (bResize) { this->Reserve(this->_Size = this->_IncrementSize); }
-			Index = this->_Size;
+			if (bResize)
+			{
+				Index = this->_Size;
+				this->Reserve(this->_Size + this->_IncrementSize);
+			}
 			auto& Result = this->_Data[Index];
 			++this->_Size;
 			return Result;

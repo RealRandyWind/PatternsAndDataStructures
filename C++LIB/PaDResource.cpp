@@ -17,7 +17,7 @@ FResource::FResource() : FObject()
 {
 	auto bNext = (_Next != NullPtr);
 
-	_Entry = bNext ? _Next : &_List.New(_Index);
+	_Entry = _Next ? _Next : &_List.New(_Index);
 	_Next = _Entry->_Next;
 	_Entry->Pointer = this;
 	_Entry->_bOccupied = True;
@@ -54,14 +54,6 @@ FVoid FResource::Clear(FSize Index)
 	delete _List[Index].Pointer;
 }
 
-FVoid FResource::ClearAll()
-{
-	for (auto& Entry : _List)
-	{
-		if(Entry._bOccupied) { delete Entry.Pointer; }
-	}
-}
-
 FResource* FResource::Pointer(FSize Index)
 {
 	return _List[Index].Pointer;
@@ -75,6 +67,6 @@ FResource::_FEntry::_FEntry()
 
 FResource::_FEntry::~_FEntry()
 {
-	Pointer = NullPtr;
+	 Pointer = NullPtr;
 	_bOccupied = False;
 }

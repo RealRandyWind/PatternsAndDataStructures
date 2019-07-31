@@ -11,6 +11,7 @@
 #include "PaDPrototype.hpp"
 #include "PaDSingelton.hpp"
 #include "PaDSingelton.hpp"
+#include "PaDBridge.hpp"
 
 
 namespace PaD

@@ -4,6 +4,8 @@
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 #include "PaDCreational.hpp"
+#include "PaDConsumer.hpp"
+#include "PaDService.hpp"
 
 namespace PaDTest
 {
@@ -60,7 +62,11 @@ namespace PaDTest
 		TEST_METHOD(TestResource)
 		{
 			FResource* ResourceA = new FConcreteResource();
-			
+			FResource* ResourceB = new FConcreteResource();
+			{
+				FResource* Resource = new FConcreteResource();
+			}
+			delete ResourceB;
 		}
 	};
 }
