@@ -37,14 +37,28 @@ namespace PaDTest
 
 		TEST_METHOD(TestComposite)
 		{
+			auto Consumer = new FConsumer();
+			auto Composite = new FComposite();
+			Consumer->ChangeComposite(Composite);
+
+			Consumer->AddComponent(new FConcreteComponent());
+			Consumer->AddComponent(new FConcreteComponent());
+			Consumer->AddComponent(new FConcreteComponent());
+			Consumer->AddComponent(new FConcreteComponent());
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestDecorator)
 		{
+			auto Consumer = new FConsumer();
+			auto Decorator = new FConcreteDecorator(new FConcreteComponent());
+			Consumer->ChangeDecorator(Decorator);
+			Consumer->Operate();
 		}
 
 		TEST_METHOD(TestFacade)
 		{
+
 		}
 
 		TEST_METHOD(TestFlyweight)

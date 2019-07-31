@@ -34,17 +34,18 @@ namespace PaD
 			_bIterateAll = bTrue;
 		}
 
+		virtual TypeItem& New(TypeItem Default, FSize &Index)
+		{
+			return (New(Index) = Default);
+		}
+
 		virtual TypeItem& New(FSize& Index)
 		{
-			auto bResize = this->_Size >= this->_BufferSize;
-
-			if (bResize)
-			{
-				Index = this->_Size;
-				this->Reserve(this->_Size + this->_IncrementSize);
-			}
-			auto& Result = this->_Data[Index];
-			++this->_Size;
+			auto bResize = (_Size >= _BufferSize);
+			Index = _Size;
+			if (bResize) { Reserve(_Size + _IncrementSize); }
+			auto& Result = _Data[Index];
+			++_Size;
 			return Result;
 		}
 
@@ -56,6 +57,16 @@ namespace PaD
 			_Data = (TypeItem*)Pointer;
 			_BufferSize = ReserveSize;
 			if (ReserveSize < _Size) { _Size = ReserveSize; }
+		}
+
+		FBoolean Empty()
+		{
+			return _Size <= 0;
+		}
+
+		FSize Size()
+		{
+			return _Size;
 		}
 
 		TypeItem& operator[](FSize Index)

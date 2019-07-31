@@ -19,15 +19,13 @@ FConsumer::FConsumer(FFactory *Factory) : FObject()
 	_Director = NullPtr;
 	_Prototype = NullPtr;
 	_Singelton = NullPtr;
+	_Composite = NullPtr;
+	_Decorator = NullPtr;
 }
 
 FConsumer::~FConsumer()
 {
-	_Factory = NullPtr;
-	_Protocol = NullPtr;
-	_Implementation = NullPtr;
-	_Director = NullPtr;
-	_Prototype = NullPtr;
+
 }
 
 FVoid FConsumer::Operate()
@@ -57,6 +55,10 @@ FVoid FConsumer::Operate()
 		Bridge->FeatureB();
 		delete Bridge;
 	}
+
+	if (_Composite) { _Composite->Execute(); }
+	
+	if (_Decorator) { _Decorator->Execute(); }
 
 	Operate(FDirector::EConfiguration::Featured);
 }
@@ -104,4 +106,20 @@ FVoid FConsumer::ChangePrototype(FPrototype* Prototype)
 FVoid FConsumer::ChangeSingelton(FSingelton* Singelton)
 {
 	_Singelton = Singelton;
+}
+
+FVoid FConsumer::ChangeComposite(FComposite* Composite)
+{
+	_Composite = Composite;
+}
+
+
+FVoid FConsumer::ChangeDecorator(FDecorator* Decorator)
+{
+	_Decorator = Decorator;
+}
+
+FVoid FConsumer::AddComponent(FComponent* Component)
+{
+	_Composite->Add(Component);
 }

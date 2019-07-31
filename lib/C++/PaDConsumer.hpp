@@ -12,6 +12,9 @@
 #include "PaDSingelton.hpp"
 #include "PaDSingelton.hpp"
 #include "PaDBridge.hpp"
+#include "PaDComponent.hpp"
+#include "PaDComposite.hpp"
+#include "PaDDecorator.hpp"
 
 
 namespace PaD
@@ -27,6 +30,8 @@ namespace PaD
 		FDirector* _Director;
 		FPrototype* _Prototype;
 		FSingelton* _Singelton;
+		FComposite* _Composite;
+		FDecorator* _Decorator;
 
 		FConsumer(FFactory* = NullPtr);
 
@@ -47,6 +52,12 @@ namespace PaD
 		virtual FVoid ChangePrototype(FPrototype*);
 
 		virtual FVoid ChangeSingelton(FSingelton*);
+
+		virtual FVoid ChangeComposite(FComposite*);
+
+		virtual FVoid ChangeDecorator(FDecorator*);
+
+		virtual FVoid AddComponent(FComponent*);
 
 
 	};

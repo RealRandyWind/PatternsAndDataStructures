@@ -38,6 +38,15 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Behavioral">
+      <UniqueIdentifier>{f185a359-d537-4055-b124-39ee19d3d5d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavioral\Header Files">
+      <UniqueIdentifier>{0b27539e-1d17-4585-98a7-8259314df7ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Behavioral\Source Files">
+      <UniqueIdentifier>{acf4823d-43b7-4c3f-958a-b20d68f12d39}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -176,6 +185,9 @@
       <Filter>Base\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\lib\C++\PaDConcreteData.hpp">
+      <Filter>Base\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\C++\PaDBehavioral.hpp">
       <Filter>Base\Header Files</Filter>
     </ClInclude>
   </ItemGroup>

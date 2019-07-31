@@ -62,11 +62,14 @@ namespace PaDTest
 		TEST_METHOD(TestResource)
 		{
 			FResource* ResourceA = new FConcreteResource();
+			ResourceA->Active();
 			FResource* ResourceB = new FConcreteResource();
+			FResource::Use(ResourceB->Index());
 			{
 				FResource* Resource = new FConcreteResource();
 			}
 			delete ResourceB;
+			FResource::Clear(ResourceA->Index());
 		}
 	};
 }

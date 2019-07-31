@@ -15,9 +15,8 @@ FResource* FResource::_Active = NullPtr;
 
 FResource::FResource() : FObject()
 {
-	auto bNext = (_Next != NullPtr);
-
-	_Entry = _Next ? _Next : &_List.New(_Index);
+	_Index = 0;
+	_Entry = _Next ? _Next : &_List.New(_List.Item(), _Index);
 	_Next = _Entry->_Next;
 	_Entry->Pointer = this;
 	_Entry->_bOccupied = True;
@@ -37,8 +36,7 @@ FSize FResource::Index()
 
 FVoid FResource::Active()
 {
-	auto bActive = (_Active != NullPtr);
-	if (bActive) { _Active->Save(); }
+	if (_Active) { _Active->Save(); }
 	_Active = _List[_Index].Pointer;
 	_Active->Load();
 }

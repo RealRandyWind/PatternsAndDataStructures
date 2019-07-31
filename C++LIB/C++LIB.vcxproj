@@ -215,6 +215,7 @@ PowerShell.exe -Command Copy-Item "$(OutDir)$(TargetName).pdb" $(SolutionDir)lib
     <ClInclude Include="..\lib\C++\PaD.hpp" />
     <ClInclude Include="..\lib\C++\PaDAdapter.hpp" />
     <ClInclude Include="..\lib\C++\PaDBase.hpp" />
+    <ClInclude Include="..\lib\C++\PaDBehavioral.hpp" />
     <ClInclude Include="..\lib\C++\PaDBridge.hpp" />
     <ClInclude Include="..\lib\C++\PaDBuilder.hpp" />
     <ClInclude Include="..\lib\C++\PaDCollection.hpp" />

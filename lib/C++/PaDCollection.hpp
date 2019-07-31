@@ -11,6 +11,8 @@ namespace PaD
 	{
 		virtual ~TCollection() = 0 { };
 
+		virtual FBoolean Empty() = 0;
+
 		virtual TypeItem Item()
 		{
 			return TypeItem();

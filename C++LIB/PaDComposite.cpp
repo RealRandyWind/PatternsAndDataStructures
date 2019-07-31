@@ -19,13 +19,16 @@ FComposite::~FComposite()
 
 FVoid FComposite::Add(FComponent *Component)
 {
+	FSize Index;
+	Add(Component, Index);
+}
+
+FVoid FComposite::Add(FComponent* Component, FSize &Index)
+{
 	for (auto& _Component : _Children)
 	{
-		auto bComponent = (_Component != NullPtr);
-		if (bComponent) { _Component = Component; }
+		if (_Component) { _Component = Component; }
 	}
-
-	FSize Index;
 	_Children.New(Index) = Component;
 }
 
@@ -38,6 +41,14 @@ FVoid FComposite::Remove(FComponent *Component)
 	}
 }
 
+FVoid FComposite::Remove(FSize Index)
+{
+	if (Index < _Children.Size())
+	{
+		_Children[Index] = NullPtr;
+	}
+}
+
 TList<FComponent*> FComposite::Children()
 {
 	return _Children;
@@ -47,7 +58,6 @@ FVoid FComposite::Execute()
 {
 	for (auto _Component : _Children)
 	{
-		auto bComponent = (_Component != NullPtr);
-		if (bComponent) { _Component->Execute(); }
+		if (_Component) { _Component->Execute(); }
 	}
 }

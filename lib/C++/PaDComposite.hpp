@@ -21,7 +21,11 @@ namespace PaD
 
 			virtual FVoid Add(FComponent*);
 
+			virtual FVoid Add(FComponent*, FSize&);
+
 			virtual FVoid Remove(FComponent*);
+
+			virtual FVoid Remove(FSize);
 
 			virtual TList<FComponent*> Children();
 

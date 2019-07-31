@@ -2,6 +2,7 @@
 #include "framework.h"
 
 #include "PaDConcreteComponent.hpp"
+#include "PaDComponent.hpp"
 
 using namespace PaD;
 using namespace PaD::Types;

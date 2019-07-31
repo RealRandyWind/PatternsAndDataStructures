@@ -17,6 +17,10 @@ namespace PaD
 
 		virtual ~TIterator() { }
 
+		virtual FBoolean Empty()
+		{
+			return True;
+		}
 
 	};
 

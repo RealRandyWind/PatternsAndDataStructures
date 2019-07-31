@@ -10,7 +10,7 @@ namespace PaD
 	{
 		using namespace Types;
 
-		struct FConcreteComponent : FObject
+		struct FConcreteComponent : FObject, FComponent
 		{
 			FConcreteComponent();
 
